@@ -1,0 +1,17 @@
+syntax: glob
+#-- Files
+*.bak.*
+*.bak
+[Tt]humbs.db
+
+#-- Directories
+App_Data/*
+bin/
+obj/
+tmp/
+[Pp]ublish/
+[Pp]ackages/
+
+#-- Microsoft Visual Studio specific
+*.user
+*.suo
