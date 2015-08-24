@@ -1,31 +1,29 @@
 ﻿using System;
-﻿using Akka.Actor;
+using Akka.Actor;
 
 namespace WinTail
 {
     #region Program
     class Program
     {
-        public static ActorSystem MyActorSystem;
+        public static ActorSystem WinTailActorSystem;
 
         static void Main(string[] args)
         {
             // initialize MyActorSystem
-            // YOU NEED TO FILL IN HERE
+            WinTailActorSystem = ActorSystem.Create("WinTailActorSystem");
 
             PrintInstructions();
 
             // time to make your first actors!
-            //YOU NEED TO FILL IN HERE
-            // make consoleWriterActor using these props: Props.Create(() => new ConsoleWriterActor())
-            // make consoleReaderActor using these props: Props.Create(() => new ConsoleReaderActor(consoleWriterActor))
-
+            IActorRef writerActor = WinTailActorSystem.ActorOf(Props.Create(() => new ConsoleWriterActor()), "writerActor");
+            IActorRef readerActor = WinTailActorSystem.ActorOf(Props.Create(() => new ConsoleReaderActor(writerActor)), "readerActor");
 
             // tell console reader to begin
-            //YOU NEED TO FILL IN HERE
+            readerActor.Tell("start");
 
             // blocks the main thread from exiting until the actor system is shut down
-            MyActorSystem.AwaitTermination();
+            WinTailActorSystem.AwaitTermination();
         }
 
         private static void PrintInstructions()
