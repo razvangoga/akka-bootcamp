@@ -57,7 +57,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Actors\ValidationActor.cs" />
-    <Compile Include="TailActor.cs" />
+    <Compile Include="Actors\TailActor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
