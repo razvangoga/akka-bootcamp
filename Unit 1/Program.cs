@@ -22,10 +22,10 @@ namespace WinTail
 
             //Props validationActorProps = Props.Create(() => new ValidationActor(writerActor));
             //IActorRef validationActor = WinTailActorSystem.ActorOf(validationActorProps, "validationActor");
-            Props fileValidatorActorProps = Props.Create(() => new FileValidatorActor(writerActor, tailCoordinatorActor));
-            IActorRef fileValidationActor = WinTailActorSystem.ActorOf(fileValidatorActorProps, "fileValidationActor");
+            Props fileValidatorActorProps = Props.Create(() => new FileValidatorActor(writerActor));
+            IActorRef fileValidationActor = WinTailActorSystem.ActorOf(fileValidatorActorProps, "validationActor");
 
-            Props consoleReaderProps = Props.Create<ConsoleReaderActor>(fileValidationActor);
+            Props consoleReaderProps = Props.Create<ConsoleReaderActor>();
             IActorRef readerActor = WinTailActorSystem.ActorOf(consoleReaderProps, "readerActor");
 
             // tell console reader to begin
