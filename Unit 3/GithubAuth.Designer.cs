@@ -52,6 +52,7 @@
             this.tbOAuth.Name = "tbOAuth";
             this.tbOAuth.Size = new System.Drawing.Size(379, 24);
             this.tbOAuth.TabIndex = 1;
+            this.tbOAuth.Text = " d47b2f28051f1e6874e9f7f4bcf54821758455be ";
             // 
             // lblAuthStatus
             // 
@@ -72,6 +73,7 @@
             this.linkGhLabel.Name = "linkGhLabel";
             this.linkGhLabel.Size = new System.Drawing.Size(273, 18);
             this.linkGhLabel.TabIndex = 3;
+            this.linkGhLabel.TabStop = true;
             this.linkGhLabel.Text = "How to get a GitHub Access Token";
             this.linkGhLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkGhLabel_LinkClicked);
             // 
