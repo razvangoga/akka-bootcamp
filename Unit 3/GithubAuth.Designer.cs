@@ -52,7 +52,7 @@
             this.tbOAuth.Name = "tbOAuth";
             this.tbOAuth.Size = new System.Drawing.Size(379, 24);
             this.tbOAuth.TabIndex = 1;
-            this.tbOAuth.Text = " d47b2f28051f1e6874e9f7f4bcf54821758455be ";
+            this.tbOAuth.Text = "d47b2f28051f1e6874e9f7f4bcf54821758455be ";
             // 
             // lblAuthStatus
             // 
